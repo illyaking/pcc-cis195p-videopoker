@@ -47,6 +47,12 @@ function show_draw_button() {
     echo '    </div>' . "\n";
 }
 
+function play_again() {
+    echo '    <div id="info">' . "\n";
+    echo '      <a href="index.php" style="text-decoration: none"><span id="draw_button">Play Again?</span></a>' . "\n";
+    echo '    </div>' . "\n";
+}
+
 function show_type($hand) {
     $type = hand_type($hand);
     $payoffs = PAYOFFS;
@@ -65,6 +71,7 @@ function show_content($hand, $final=FALSE) {
     show_hand($hand);
     if ($final) {
         show_type($hand);
+        play_again();
     } else {
         show_draw_button();
     }
