@@ -2,10 +2,17 @@
 
 require_once ('includes/poker_constants.php');
 require_once ('includes/poker_code.php');
+require_once ('includes/page_constants.php');
+require_once ('includes/utilities.php');
+require_once ('includes/login_constants.php');
 require_once ('includes/hand_type.php');
 
-$deck = json_decode(urldecode($_POST[DECK_KEY]));
-$hand = json_decode(urldecode($_POST[HAND_KEY]));
+require_secure();
+session_start();
+require_login();
+
+$deck = get_session_value(DECK_KEY);
+$hand = get_session_value(HAND_KEY);
 
 draw_cards($hand, $deck);
 
@@ -22,6 +29,7 @@ draw_cards($hand, $deck);
     <script src="includes/poker.js.php"></script>
 </head>
 <body onload="javascript:init();">
+<?php show_user(); ?>
 <div id="spacer"></div>
 <?php show_content($hand, TRUE); ?>
 </body>

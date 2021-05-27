@@ -6,17 +6,16 @@
 const CARD_IMAGE_PERCENT = '95%';
 const HAND_PADDING = '8px';
 const POKER_FONT = <<<POKER
-        font-family: Impact, Charcoal, sans-serif;
+        font-family: 'Trebuchet MS', sans-serif;
         padding: 5px 10px;
         font-size: 3em;
+        text-transform: uppercase;
         
 POKER;
 const POKER_FONT_TWO = <<<POKER
-    background: gold;
-    color: black;
-    border: 2px solid black;
-    box-shadow: 5px 5px 5px rgba(0,0,0,.5);
-    border-radius: 10px;
+    background: red;
+    color: #FFFF00;
+    border: 5px groove black;
 POKER;
 
 /**
@@ -42,13 +41,16 @@ const CARD_SRC = 'data-src';
 const HAND_KEY = 'hand';
 const DECK_KEY = 'deck';
 const CARD_KEY = 'card';
+const FINAL_KEY = 'final';
+const BALANCE_KEY = 'balance';
+const HANDS_PLAYED_KEY = 'hands_played';
 
 const KEEP = 'keep';
 const DRAW = 'draw';
 
 /**
  * Card - [rank, suit],
- *      rank is a nyumber 0 -12 (ace, 2, 3, ..., jack, queen, king)
+ *      rank is a number 0 -12 (ace, 2, 3, ..., jack, queen, king)
  *      suit is a nu ber 0 - 3 (clubs, diamonds, hearts, spades)
  */
 

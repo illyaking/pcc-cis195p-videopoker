@@ -5,8 +5,7 @@ require_once ('poker_constants.php');
 ?>
 
 body {
-    background-image: url('../images/poker_table.jpg');
-    background-color: #000000;
+    background-color: #00019F;
     height: auto;
 }
 
@@ -24,7 +23,6 @@ body {
 }
 
 .statement {
-<?php echo POKER_FONT_TWO; ?>
     margin: 0 10% 0 10%;
     text-align: center;
 }
@@ -46,18 +44,33 @@ body {
 }
 
 #draw_button:hover {
-    background-color:darkgoldenrod;
-    color: goldenrod;
-    box-shadow: 0px 0px 0px;
+    background-color: #FFFF00;
+    color: #000;
+    border: 0;
 }
 
 #hand_type {
+    color: #FFFF00;
+    text-transform: uppercase;
+    background-color: black;
 <?php echo POKER_FONT; ?>
 }
 
 #payoff {
+    background-color: black;
 <?php echo POKER_FONT; ?>
 }
-#content {
-    visibility: hidden;
+
+#user_pane {
+    color: #FFFF00;
+    text-align: right;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#logout {
+    font-size: .75em;
+    color:white;
+    text-decoration: none;
 }
